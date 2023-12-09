@@ -1,0 +1,19 @@
+.rhap_container {
+  background: #333;
+}
+
+.rhap_progress-filled {
+    background: #bd24ed;
+}
+
+.rhap_download-progress {
+  background: #1cc4c4;
+}
+
+.rhap_time {
+  color: #fff;
+}
+
+.rhap_play-pause-button {
+  color: #fff;
+}

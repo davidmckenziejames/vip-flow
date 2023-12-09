@@ -1,0 +1,22 @@
+.avatar-excess span {
+  background: linear-gradient(
+    135deg,
+    #e72b91ff,
+    #e2279cff,
+    #de22a6ff,
+    #d91eb1ff,
+    #d51abcff,
+    #d015c6ff,
+    #cc11d1ff,
+    #c70ddcff,
+    #c308e6ff,
+    #be04f1ff
+  );
+  color: white;
+  border: solid 2px white;
+  font-size: 18px;
+  font-weight: 700;
+}
+#avatar-dj {
+  border: "2px solid #69F2EB" !important;
+}
