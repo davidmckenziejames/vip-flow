@@ -23,10 +23,8 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  FormErrorMessage,
   Input,
   FormControl,
-  extendTheme,
   FormLabel,
   useRadio,
   useRadioGroup,
@@ -46,6 +44,7 @@ import MenuModal from "../components/MenuModal";
 import Confirm from "../components/Confirm";
 
 const fontlabelStyle = {
+  my: "10px",
   fontSize: "14px",
   fontWeight: "600",
   color: "#fff",
@@ -56,7 +55,7 @@ const wb = {
   color: "#111",
 };
 
-export default function Vudu() {
+export default function Hotel() {
   const [selectedOption, setSelectedOption] = useState<string | undefined>();
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
@@ -91,6 +90,8 @@ export default function Vudu() {
 
   const [showBottles, setShowBottles] = useState(false);
 
+  const group = getRootProps();
+
   const getTodayDate = () => {
     const today = new Date();
     const year = today.getFullYear();
@@ -118,21 +119,11 @@ export default function Vudu() {
       flexDirection={"column"}
       bg="black"
       w="100%"
-      minH={"100vh"}
       backgroundImage={"url(src/assets/bottles/vip.jpg)"}
       bgRepeat="no-repeat"
       bgSize="cover"
       bgPosition="center"
     >
-      <Box
-        position="fixed"
-        top="0"
-        left="0"
-        width="100%"
-        height="100%"
-        backgroundColor="rgba(0, 0, 0, 0.6)" // Adjust the alpha (last value) for transparency
-        zIndex="1"
-      />
       <Flex
         borderBottom="1px solid #bc9c4f"
         bg="black"
@@ -140,49 +131,46 @@ export default function Vudu() {
         p="20px"
         justify={"center"}
         justifyContent="center"
-        zIndex="10"
       >
-        <Image width="80px" src="src/assets/vudu-logo.png" />
+        <Image
+          width="80px"
+          src="https://vuduyork.co.uk/wp-content/themes/yootheme/cache/5c/vudu-lounge-logo-L-5c2afae8.webp"
+        />
       </Flex>
-      <VStack overflow="hidden" mt="20px" pb="50px" zIndex="10">
+      <VStack overflow="hidden" mt="20px" pb="50px">
         <Box
           display={"flex"}
           borderRadius={"10px"}
-          border="2px solid #fff"
+          border="2px solid green"
           overflow="hidden"
           maxW="500px"
           mt="20px"
-          gap={"60px"}
           bg={"#111"}
           w={{ base: "90%", md: "80%" }}
         >
           <Box as="form" onSubmit={handleSubmit} w="100%">
             <Flex
-              gap={"20px"}
               px="20px"
-              pb="30px"
               flexDirection={"column"}
+              {...group}
+              pb="30px"
+              pt="10px"
               w={"100%"}
               color={"white"}
             >
-              <Text mt="20px" fontSize="22px" fontWeight="600" color={"white"}>
+              <Text mt="10px" fontSize="22px" fontWeight="600" color={"white"}>
                 Request VIP Table
               </Text>
-
               <FormControl isRequired>
                 <FormLabel {...fontlabelStyle}>Celebration Type</FormLabel>
                 <Select placeholder="Select option" {...wb}>
-                  <option value="justForFun">Just for Fun</option>
-                  <option value="birthday">Birthday</option>
-                  <option value="specialOccasion">Special Occasion</option>
-                  <option value="anniversary">Anniversary</option>
-                  <option value="date">Date</option>
-                  <option value="accomplishment">Accomplishment</option>
-                  <option value="wedding">Wedding</option>
-                  <option value="other">Other</option>
+                  <option value="option1">Just for Fun</option>
+                  <option value="option2">Birthday</option>
+                  <option value="option3">Wedding</option>
+                  <option value="option3">Other</option>
                 </Select>
               </FormControl>
-              <FormControl isRequired>
+              <FormControl isRequired mt="4">
                 <FormLabel htmlFor="event-time" {...fontlabelStyle}>
                   Select arrival time:
                 </FormLabel>
@@ -208,7 +196,7 @@ export default function Vudu() {
                   Arrival must be between 10:00pm and 2:00am.
                 </FormHelperText>
               </FormControl>
-              <FormControl isRequired>
+              <FormControl isRequired mt="4">
                 <FormLabel htmlFor="group-size" {...fontlabelStyle}>
                   Select group size:
                 </FormLabel>
@@ -217,7 +205,7 @@ export default function Vudu() {
                   setSelectedNumber={setSelectedNumber}
                 />
               </FormControl>
-              <FormControl isRequired>
+              <FormControl isRequired mt="4">
                 <FormLabel htmlFor="event-date" {...fontlabelStyle}>
                   Select the date of the event:
                 </FormLabel>
@@ -232,7 +220,7 @@ export default function Vudu() {
                 />
               </FormControl>
 
-              <FormControl>
+              <FormControl mt="4">
                 <FormLabel htmlFor="message" {...fontlabelStyle}>
                   Booking Note
                 </FormLabel>
@@ -247,7 +235,29 @@ export default function Vudu() {
                 />
               </FormControl>
               <MenuModal />
+            </Flex>
+            <Flex flexDirection={"column"} bg="#111">
               <Confirm />
+
+              <Collapse in={isOpen} animateOpacity>
+                <Flex w="100%" flexDirection={"column"}>
+                  <Button
+                    w="100%"
+                    alignItems={"center"}
+                    bg={"#111"}
+                    color={"white"}
+                    mt="4"
+                    display={"flex"}
+                    gap={"6px"}
+                    _hover={{ bg: "#111" }}
+                  >
+                    <FaApple /> Checkout with Apple Pay
+                  </Button>
+                  <Text textAlign="center" fontSize={"12px"} fontWeight={"600"}>
+                    Refundable £50 booking deposit + selected bottles
+                  </Text>
+                </Flex>
+              </Collapse>
             </Flex>
           </Box>
         </Box>

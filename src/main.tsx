@@ -19,6 +19,11 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import theme from "./theme";
 import { HelmetProvider } from "react-helmet-async";
 import Vudu from "./pages/Vudu";
+import Admin from "./pages/Admin";
+import Manage from "./pages/Manage";
+import Hotel from "./pages/Hotel";
+import ROICalculator from "./components/Calculator";
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
@@ -26,9 +31,12 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <Router>
           <Routes>
             <Route path="/vudu" element={<Vudu />} />
+            <Route path="/admin" element={<Manage />} />
+            <Route path="/hotel" element={<Hotel />} />
+            <Route path="/roi" element={<ROICalculator />} />
           </Routes>
         </Router>
       </ChakraProvider>
     </HelmetProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

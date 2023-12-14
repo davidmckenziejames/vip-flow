@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import {
   Box,
   Tab,
@@ -15,7 +15,9 @@ import {
   HStack,
   Image,
   Flex,
+  Heading,
 } from "@chakra-ui/react";
+import { FiX } from "react-icons/fi";
 
 type OptionProps = {
   value: string;
@@ -31,7 +33,7 @@ function BottleCard(props: {
 }) {
   const { children, quantity, onIncrement, onDecrement, imageUrl } = props;
   return (
-    <Flex as="label" w={{ base: "45%" }} cursor="pointer">
+    <Flex as="label" w={{ base: "45%", md: "30%" }} cursor="pointer">
       <VStack
         borderWidth="1px"
         borderRadius="md"
@@ -47,7 +49,7 @@ function BottleCard(props: {
           src={imageUrl}
           alt="Bottle image"
           w="100%"
-          h="120px"
+          maxH="100px"
           objectFit="contain"
         />
         {children}
@@ -199,6 +201,14 @@ const bottleData: BottleType[] = [
   },
 ];
 
+type TotalProps = {
+  total: number;
+};
+
+export function Total({ total }: TotalProps) {
+  return <Text fontSize="16px">Total: £{total.toFixed(2)}</Text>;
+}
+
 export default function Bottles() {
   // ...
 
@@ -208,57 +218,35 @@ export default function Bottles() {
     defaultValue: undefined,
     // rest of the props...
   });
-  const handleIncrement = (bottle: Bottle) => {
+  const handleIncrement = useCallback((bottle: Bottle) => {
     setCart((prevCart) => {
       const cartCopy = [...prevCart];
       const existingBottle = cartCopy.find((b) => b.name === bottle.name);
-      if (existingBottle) {
-        existingBottle.quantity += 1;
-      } else {
-        cartCopy.push({ ...bottle, quantity: 1 });
-      }
-      return cartCopy;
-    });
-  };
 
-  // The handleDecrement function
-  const handleDecrement = (bottle: Bottle) => {
+      if (existingBottle) {
+        // Use the functional update form to ensure correct state update
+        return cartCopy.map((b) =>
+          b.name === bottle.name ? { ...b, quantity: b.quantity + 1 } : b,
+        );
+      } else {
+        return [...cartCopy, { ...bottle, quantity: 1 }];
+      }
+    });
+  }, []);
+
+  const handleDecrement = useCallback((bottle: Bottle) => {
     setCart((prevCart) => {
       const cartCopy = [...prevCart];
       const existingBottle = cartCopy.find((b) => b.name === bottle.name);
       if (existingBottle && existingBottle.quantity > 1) {
         existingBottle.quantity -= 1;
-      } else if (existingBottle && existingBottle.quantity === 1) {
+      } else {
         return cartCopy.filter((b) => b.name !== bottle.name);
       }
       return cartCopy;
     });
-  };
-  const toast = useToast();
-  const handleAddToCart = (bottle: Bottle) => {
-    setCart((prevCart) => {
-      const existingBottle = prevCart.find((b) => b.name === bottle.name);
-      if (existingBottle) {
-        toast({
-          title: "Bottle already in the cart.",
-          description: `£{bottle.name} is already in the cart.`,
-          status: "error",
-          duration: 5000,
-          isClosable: true,
-        });
-      } else {
-        prevCart.push({ ...bottle, quantity: 1 });
-        toast({
-          title: "Bottle added to the cart.",
-          description: `Added £{bottle.name} to the cart.`,
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
-      }
-      return [...prevCart];
-    });
-  };
+  }, []);
+
   const handleRemove = (bottle: Bottle) => {
     setCart((prevCart) => {
       return prevCart.filter((b) => b.name !== bottle.name);
@@ -297,8 +285,14 @@ export default function Bottles() {
                       onDecrement={() => handleDecrement(bottle)}
                       imageUrl={bottle.imageUrl}
                     >
-                      <Box>{bottle.name}</Box>
-                      <Box>{bottle.price}</Box>
+                      <Box
+                        fontWeight={"bold"}
+                        fontSize="16px"
+                        lineHeight={"1em"}
+                      >
+                        {bottle.name}
+                      </Box>
+                      <Box lineHeight={"1em"}>{bottle.price}</Box>
                     </BottleCard>
                   );
                 })}
@@ -308,21 +302,30 @@ export default function Bottles() {
         </TabPanels>
       </Tabs>
       {cart.length > 0 && (
-        <Box mt={6} borderTop="2px solid #111" p="20px">
-          <Text fontSize="20px" mb={2} fontWeight={"bold"}>
-            Cart
-          </Text>
+        <Box
+          bg="#111"
+          color={"#fff"}
+          mt={"10px"}
+          borderTop="2px solid #111"
+          p="20px"
+          pb="30px"
+        >
+          <HStack justify={"space-between"} mb="10px">
+            <Text fontSize="20px" fontWeight={"bold"}>
+              Cart
+            </Text>
+            <Total total={total} />
+          </HStack>
           {cart.map((item) => (
             <HStack key={item.name}>
               <Text>
-                {item.name} - Quantity: {item.quantity}
+                {item.quantity} x {item.name}
               </Text>
-              <Button onClick={() => handleRemove(item)}>Remove</Button>
+              <Box onClick={() => handleRemove(item)} bg="#fff">
+                <FiX cursor={"pointer"} color="#111" />
+              </Box>
             </HStack>
           ))}
-          <Text fontSize="xl" mt={3}>
-            Total: £{total.toFixed(2)}
-          </Text>
         </Box>
       )}
     </Box>
