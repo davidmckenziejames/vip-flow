@@ -9,14 +9,11 @@ import {
   Text,
   VStack,
   HStack,
-  useDisclosure,
-  Collapse,
 } from "@chakra-ui/react";
 import { addDays, addMonths, format } from "date-fns";
 import { ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
-import Contact from "./Pest/Contact";
 
-export default function TimeSlotBooking() {
+const TimeSlotBooking = () => {
   const today = new Date();
   const [selectedMonth, setSelectedMonth] = useState<number>(today.getMonth());
   const [selectedDate, setSelectedDate] = useState<Date>(today);
@@ -38,6 +35,14 @@ export default function TimeSlotBooking() {
     "16:00",
   ];
 
+  const handleWheel = (event: React.WheelEvent) => {
+    if (event.deltaY < 0) {
+      slideLeft();
+    } else if (event.deltaY > 0) {
+      slideRight();
+    }
+  };
+
   const slideLeft = () => {
     if (startDay > 0) {
       setStartDay((oldStartDay) => oldStartDay - 1);
@@ -52,10 +57,6 @@ export default function TimeSlotBooking() {
     setHasMovedRight(true);
   };
 
-  const handleMouseMove = (event: React.MouseEvent) => {
-    event.preventDefault(); // Prevent the default mouse movement behavior
-  };
-
   return (
     <Flex p="0px" pt="20px" flexDirection="column" alignItems="center">
       <Flex w="100%" justifyContent="center">
@@ -64,9 +65,9 @@ export default function TimeSlotBooking() {
       <VStack align="start" spacing={2} width="100%" maxW="800px">
         <Flex
           align="flex-start"
-          onMouseMove={handleMouseMove}
           justify="space-between"
           width="100%"
+          onWheel={handleWheel}
         >
           <Box color={hasMovedRight ? "black" : "white"} pt="10px">
             <ChevronLeftIcon boxSize={8} onClick={slideLeft} />
@@ -75,7 +76,6 @@ export default function TimeSlotBooking() {
             overflowX="scroll"
             justify="space-between"
             width="100%"
-            onMouseMove={handleMouseMove}
             css={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
@@ -93,7 +93,7 @@ export default function TimeSlotBooking() {
                     borderRadius="md"
                     onClick={() => setSelectedDate(date)}
                     color="#fff"
-                    bg="skyblue"
+                    bg="purple"
                     py="6px"
                   >
                     {format(date, "EEE do MMM")}
@@ -154,4 +154,6 @@ export default function TimeSlotBooking() {
       </VStack>
     </Flex>
   );
-}
+};
+
+export default TimeSlotBooking;

@@ -64,47 +64,79 @@ export const Main = (props: FlexProps) => {
   const data = [
     {
       name: "Peter Bennett",
-      celebration: "Birthday",
+      celebration: "Pigeons",
       date: "Fri 15th December",
-      time: "10:00 PM",
+      time: "10:00 AM",
       people: "5",
-      amount: "100",
+      amount: "300",
     },
     {
       name: "Archie Evans",
-      celebration: "Just For Fun",
+      celebration: "Bed Bugs",
       date: "Fri 15th December",
-      time: "11:00 PM",
+      time: "11:00 AM",
       people: "8",
       amount: "600",
     },
     {
       name: "Mike Forest",
-      celebration: "Just For Fun",
+      celebration: "Bed Bugs",
       date: "Fri 15th December",
-      time: "11:30 PM",
+      time: "11:30 AM",
       people: "6",
       amount: "300",
     },
     {
       name: "Annie Stevens",
-      celebration: "Wedding",
+      celebration: "Rats",
       date: "Sat 16th December",
-      time: "9:30 PM",
+      time: "9:30 AM",
       people: "8",
       amount: "200",
     },
     {
       name: "Rich Harris",
-      celebration: "Birthday",
+      celebration: "Bed Bugs",
       date: "Sat 16th December",
-      time: "10:30 PM",
+      time: "10:30 AM",
       people: "8",
       amount: "230",
     },
     {
       name: "Rebecca Jones",
-      celebration: "Just for Fun",
+      celebration: "Bed Bugs",
+      date: "Sat 16th December",
+      time: "12:00 AM",
+      people: "4",
+      amount: "170",
+    },
+    {
+      name: "Rebecca Jones",
+      celebration: "Bed Bugs",
+      date: "Sat 16th December",
+      time: "12:00 AM",
+      people: "4",
+      amount: "170",
+    },
+    {
+      name: "Rebecca Jones",
+      celebration: "Bed Bugs",
+      date: "Sat 16th December",
+      time: "12:00 AM",
+      people: "4",
+      amount: "170",
+    },
+    {
+      name: "Rebecca Jones",
+      celebration: "Bed Bugs",
+      date: "Sat 16th December",
+      time: "12:00 AM",
+      people: "4",
+      amount: "170",
+    },
+    {
+      name: "Rebecca Jones",
+      celebration: "Bed Bugs",
       date: "Sat 16th December",
       time: "12:00 AM",
       people: "4",
@@ -122,16 +154,16 @@ export const Main = (props: FlexProps) => {
       {...props}
     >
       <Heading px="20px" fontSize={"24px"} mb="10px">
-        Table Bookings
+        Pest Bookings
       </Heading>
       <Table variant="simple">
         <Thead>
           <Tr>
             <Th>Name</Th>
-            <Th>Celebration</Th>
+            <Th>Pest</Th>
             <Th>Date</Th>
             <Th>Time</Th>
-            <Th>People</Th>
+
             <Th>Amount</Th>
             <Th>Deposit</Th>
             <Th>Actions</Th>
@@ -152,12 +184,10 @@ export const Main = (props: FlexProps) => {
               <Td>
                 <Flex {...itemStyle}>{booking.time}</Flex>
               </Td>
-              <Td>
-                <Flex {...itemStyle}>{`${booking.people} people`}</Flex>
-              </Td>
+
               <Td>
                 <Flex {...itemStyle} alignItems={"center"} gap={"4px"}>
-                  <FaShoppingBag fontSize={"12px"} />£{booking.amount}
+                  <FaShoppingCart fontSize={"14px"} />£{booking.amount}
                 </Flex>
               </Td>
               <Td>

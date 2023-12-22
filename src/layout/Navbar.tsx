@@ -30,14 +30,17 @@ export const Navbar = () => {
       px="40px"
       as="nav"
       role="navigation"
-      bg="black"
+      bg="#062440"
       color={"white"}
     >
       <HStack justify={"space-between"} width={"100%"}>
         <Flex gap="25px" fontWeight={"600"} fontSize={"18px"} align={"center"}>
-          <Image src="src/assets/vudu-logo.png" height={"30px"} />
+          <Image
+            src="https://dynopest.co.uk/wp-content/uploads/2023/07/dyno-white.png"
+            height={"30px"}
+          />
           <Link>Bookings</Link>
-          <Link>Bottles</Link>
+
           <Link>Customers</Link>
           <Link>Settings</Link>
         </Flex>
