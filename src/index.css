@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .avatar-excess span {
   background: linear-gradient(
     135deg,
@@ -19,4 +23,12 @@
 }
 #avatar-dj {
   border: "2px solid #69F2EB" !important;
+}
+
+.reviewspacing {
+  right: 10px;
+  top: 10px;
+  font-size: 12px;
+  column-gap: 4px;
+  line-height: 1em;
 }
