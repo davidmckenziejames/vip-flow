@@ -12,19 +12,25 @@ function GroupSize(props: any) {
   const checkbox = getCheckboxProps();
 
   return (
-    <Button
+    <Flex
       as="label"
       {...checkbox}
-      variant="outline"
-      mb={2}
+      px="15px"
+      height="40px"
+      alignItems="center"
+      border="1px solid #e8e5fd"
       bg="#fff"
+      lineHeight="1em"
+      fontWeight="600"
+      borderRadius="5px"
       color="black"
+      fontSize="16px"
       _hover={{ bg: "#7d5aeb", color: "white" }}
       _checked={{ bg: "#7d5aeb", color: "white" }}
     >
       <input {...input} />
       {props.children}
-    </Button>
+    </Flex>
   );
 }
 
@@ -34,7 +40,7 @@ type GroupSizeSelectProps = {
 };
 
 function GroupSizeSelect(props: GroupSizeSelectProps) {
-  const groupSizes = Array.from({ length: 20 }, (_, i) => (i + 1).toString());
+  const groupSizes = Array.from({ length: 20 }, (_, i) => (i + 2).toString());
 
   const {
     getRootProps: getNumberRootProps,

@@ -6,8 +6,6 @@ import {
   Text,
   Flex,
 } from "@chakra-ui/react";
-import { FaApple, FaPaypal, FaStripe, FaStripeS } from "react-icons/fa";
-import { Total } from "./Bottles";
 
 const fontlabelStyle = {
   mb: "8px",
@@ -91,66 +89,6 @@ export function ContactForm() {
             value=""
           />
         </FormControl>
-        <Flex
-          w={"100%"}
-          flexDir={"column"}
-          bg="#f3f3f3"
-          border="1px solid #d2d2d2"
-          borderRadius={"8px"}
-          p="10px"
-          mt="20px"
-        >
-          <Text fontWeight={"bold"}>Summary</Text>
-          <Text w="100%" fontSize={"14px"} fontWeight={"600"}>
-            Booking Deposit:{" "}
-            <Text as="span" fontWeight={"400"}>
-              £50.00 (refundable)
-            </Text>
-          </Text>
-          <Text w="100%" fontSize={"14px"} fontWeight={"600"}>
-            Pre-Ordered Bottles:{" "}
-            <Text as="span" fontWeight={"400"}>
-              £360.00 (saving £150)
-            </Text>
-          </Text>
-        </Flex>
-        <Button
-          w="100%"
-          alignItems={"center"}
-          bg={"#111"}
-          color={"white"}
-          mt="4"
-          display={"flex"}
-          gap={"6px"}
-          _hover={{ bg: "#111" }}
-        >
-          <FaApple /> Checkout with Apple Pay
-        </Button>
-        <Button
-          w="100%"
-          alignItems={"center"}
-          bg={"navy"}
-          color={"white"}
-          colorScheme="PayPal"
-          mt="10px"
-          display={"flex"}
-          gap={"6px"}
-          _hover={{ bg: "navy" }}
-        >
-          <FaPaypal /> Checkout with PayPal
-        </Button>
-        <Button
-          w="100%"
-          alignItems={"center"}
-          bg={"#6059F8"}
-          color={"white"}
-          mt="10px"
-          display={"flex"}
-          gap={"6px"}
-          _hover={{ bg: "#6059F8" }}
-        >
-          <FaStripeS /> Checkout with Stripe
-        </Button>
       </Flex>
     </>
   );

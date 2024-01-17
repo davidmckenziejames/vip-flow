@@ -35,7 +35,7 @@ import ROICalculator from "./components/Calculator";
 import Pest from "./pages/Pest";
 import PestAdmin from "./pages/Pest-Admin";
 import Reviews from "./pages/Reviews";
-import Framer from "./pages/Framer";
+import Home from "./pages/Home";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -43,14 +43,14 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <ChakraProvider theme={theme}>
         <Router>
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/vudu" element={<Vudu />} />
             <Route path="/admin" element={<Manage />} />
             <Route path="/pestadmin" element={<PestAdmin />} />
             <Route path="/hotel" element={<Hotel />} />
             <Route path="/roi" element={<ROICalculator />} />
             <Route path="/dyno" element={<Pest />} />
-            <Route path="/" element={<Reviews />} />
-            <Route path="/fr" element={<Framer />} />
+            <Route path="/reviews" element={<Reviews />} />
           </Routes>
         </Router>
       </ChakraProvider>

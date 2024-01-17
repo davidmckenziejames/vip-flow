@@ -1,28 +1,4 @@
-import React, { useState } from "react";
-import {
-  Box,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-  VStack,
-  Button,
-  useRadioGroup,
-  useToast,
-  useRadio,
-  Text,
-  HStack,
-  Image,
-  Flex,
-} from "@chakra-ui/react";
-
-type BottleType = {
-  type: string;
-  bottles: Bottle[];
-};
-
-type Bottle = {
+export type Bottle = {
   name: string;
   price: string;
   quantity: number;
@@ -30,6 +6,12 @@ type Bottle = {
   imageUrl: string;
 };
 
+export type BottleType = {
+  type: string;
+  bottles: Bottle[];
+};
+
+// Data for different types of bottles
 export const bottleData: BottleType[] = [
   {
     type: "Vodka",
@@ -57,6 +39,39 @@ export const bottleData: BottleType[] = [
         price: "£135",
         quantity: 0,
         imageUrl: "src/assets/bottles/ciroc-vodka.jpg",
+      },
+    ],
+  },
+  {
+    type: "Whiskey",
+    bottles: [
+      {
+        name: "Monkey Shoulder",
+        price: "£300",
+        quantity: 0,
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/monkey-shoulder.jpg",
+      },
+      {
+        name: "Macallan Gold",
+        price: "£360",
+        quantity: 0,
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/macallan-gold.jpg",
+      },
+      {
+        name: "Johnnie Walker",
+        price: "£300",
+        quantity: 0,
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/johnnie-walker-blue.jpg",
+      },
+      {
+        name: "Glenfiddich 12yr",
+        price: "£300",
+        quantity: 0,
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/glenfiddich-12.jpg",
       },
     ],
   },
@@ -148,47 +163,34 @@ export const bottleData: BottleType[] = [
       },
     ],
   },
-];
+  {
+    type: "Packages",
+    bottles: [
+      {
+        name: "Moet & Chandon",
+        price: "£50",
+        quantity: 0,
+        imageUrl: "src/assets/bottles/mc.jpg",
+      },
+      {
+        name: "Veuve Clicquot",
+        price: "£70",
+        quantity: 0,
+        imageUrl: "src/assets/bottles/v-c.jpg",
+      },
+      {
+        name: "Dom Perignon",
+        price: "£200",
+        quantity: 0,
+        imageUrl: "src/assets/bottles/dom-perignon.jpg",
+      },
 
-export function BottleCard(props: {
-  children: React.ReactNode;
-  quantity: number;
-  onIncrement: () => void;
-  onDecrement: () => void;
-  imageUrl: string; // Add imageUrl prop
-}) {
-  const { children, quantity, onIncrement, onDecrement, imageUrl } = props;
-  return (
-    <Flex as="label" w={{ base: "45%" }} cursor="pointer">
-      <VStack
-        borderWidth="1px"
-        borderRadius="md"
-        boxShadow="md"
-        _focus={{
-          boxShadow: "none",
-        }}
-        align="center"
-        p="10px"
-        w="100%"
-      >
-        <Image
-          src={imageUrl}
-          alt="Bottle image"
-          w="100%"
-          h="120px"
-          objectFit="contain"
-        />
-        {children}
-        <HStack>
-          <Button size="sm" onClick={onDecrement}>
-            -
-          </Button>
-          <Text>{quantity}</Text>
-          <Button size="sm" onClick={onIncrement}>
-            +
-          </Button>
-        </HStack>
-      </VStack>
-    </Flex>
-  );
-}
+      {
+        name: "Louis Roederer ",
+        price: "£300",
+        quantity: 0,
+        imageUrl: "src/assets/bottles/louis-roe.webp",
+      },
+    ],
+  },
+];
