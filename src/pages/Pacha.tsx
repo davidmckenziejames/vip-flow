@@ -45,8 +45,7 @@ import { ContactForm } from "../components/ContactForm";
 import GroupSizeSelect from "../components/GroupSize";
 import Bottles, { Total } from "../Form/Bottles";
 import { FaApple, FaArrowRight, FaLock, FaUsers } from "react-icons/fa";
-import MenuModal from "../components/MenuModal";
-import Confirm from "../components/Confirm";
+
 import { options, Option } from "../Form/CelebrationOptions";
 import { PaymentButtons } from "../Form/PaymentButtons";
 import { format } from "date-fns";

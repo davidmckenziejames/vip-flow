@@ -30,10 +30,9 @@ import theme from "./theme";
 import { HelmetProvider } from "react-helmet-async";
 import Vudu from "./pages/Vudu";
 import Pacha from "./pages/Pacha";
-import Manage from "./pages/Manage";
-import Hotel from "./pages/Hotel";
+
 import ROICalculator from "./components/Calculator";
-import Pest from "./pages/Pest";
+
 import PestAdmin from "./pages/Pest-Admin";
 import Reviews from "./pages/Reviews";
 import Home from "./pages/Home";
@@ -47,11 +46,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <Route path="/" element={<Home />} />
             <Route path="/vudu" element={<Vudu />} />
             <Route path="/pacha" element={<Pacha />} />
-            <Route path="/admin" element={<Manage />} />
             <Route path="/pestadmin" element={<PestAdmin />} />
-            <Route path="/hotel" element={<Hotel />} />
             <Route path="/roi" element={<ROICalculator />} />
-            <Route path="/dyno" element={<Pest />} />
             <Route path="/reviews" element={<Reviews />} />
           </Routes>
         </Router>

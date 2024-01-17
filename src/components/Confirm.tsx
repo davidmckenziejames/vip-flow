@@ -12,7 +12,6 @@ import {
   useDisclosure,
   Text,
 } from "@chakra-ui/react";
-import Bottles from "../components/Bottles";
 import { ContactForm } from "./ContactForm";
 import { FiX } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa";
