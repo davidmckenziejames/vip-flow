@@ -54,8 +54,8 @@ export default function MenuModal() {
       borderRadius={"10px"}
       flexDirection={"column"}
       justifyContent={"center"}
-      py="15px"
-      gap={"10px"}
+      py="0px"
+      gap={"0px"}
       backgroundImage="url('src/assets/bottles.jpg')"
       backgroundSize="cover"
       backgroundPosition="center"
@@ -64,18 +64,52 @@ export default function MenuModal() {
       overflow={"hidden"}
       bgGradient="linear(to-l, rgb(248, 52, 246) 0.6%, rgb(152, 38, 252) 90%)"
     >
-      <Text
-        fontSize={"18px"}
-        fontWeight={"700"}
-        zIndex="3"
-        lineHeight={"1em"}
-        textAlign={"center"}
-        w={"100%"}
-        color="#fff"
+      <Flex
+        py="10px"
+        px={"10px"}
+        width={"100%"}
+        gap={"10px"}
+        justifyContent="center"
+        alignItems={"center"}
       >
-        10% DISCOUNT ON PRE-ORDERS
-      </Text>
-      <Button alignSelf={"center"} onClick={onOpen}>
+        <Heading color="white" fontSize={"22px"}>
+          Pre-Order Bottles
+        </Heading>
+        <Text
+          bgGradient={
+            "linear(to-l,  rgb(9, 154, 151), rgb(21, 205, 168) 91.1%)"
+          }
+          color={"white"}
+          fontWeight={"700"}
+          px="8px"
+          py="5px"
+          borderRadius={"5px"}
+          fontSize={"14px"}
+          lineHeight={"1em"}
+        >
+          SAVE 10%
+        </Text>
+      </Flex>
+
+      <Bottles />
+      <Flex
+        px={"20px"}
+        pb="15px"
+        fontWeight={"700"}
+        mt="-40px"
+        color={"white"}
+        lineHeight={"1em"}
+        onClick={onClose}
+        fontSize={"16px"}
+        gap={"5px"}
+        alignItems={"center"}
+        justifyContent={"flex-end "}
+        w="100%"
+        cursor={"pointer"}
+      >
+        CONTINUE <FaArrowRight />
+      </Flex>
+      <Button alignSelf={"center"} onClick={onOpen} display="none">
         VIEW BOTTLE MENU
       </Button>
       <Modal

@@ -49,9 +49,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <Route path="/hotel" element={<Hotel />} />
             <Route path="/roi" element={<ROICalculator />} />
             <Route path="/dyno" element={<Pest />} />
-            <Route path="/checkout" element={<CheckoutForm />} />
-            <Route path="/return" element={<Return />} />
-            <Route path="/leads" element={<ControlledBoard />} />
             <Route path="/" element={<Reviews />} />
             <Route path="/fr" element={<Framer />} />
           </Routes>
