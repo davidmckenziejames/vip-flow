@@ -3,7 +3,7 @@ import { Meteors } from "./meteors";
 export default function CTA() {
   return (
     <>
-      <div className="relative mt-[20px] shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
+      <div className="xs:w-full md:w-2/3 relative mt-[20px] shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
         <h1 className="font-bold text-2xl text-white mb-4 relative z-50">
           Save time & make more money
         </h1>

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "./moving-border";
 import { LampContainer } from "./lamp";
 import CTA from "./CTA";
+import Marquee from "./marquee";
 const items = [
   { text: "Increase table bookings & sales" },
   { text: "Capture revenue in advance & improve cashflow" },
@@ -12,6 +13,7 @@ const items = [
   { text: "Reduce no-shows and late arrivals" },
   { text: "Increase total spend & repeat bookings" },
   { text: "Eliminate wasted effort & time" },
+  { text: "Take deposits & pre-orders" },
   {
     text: "Boost organisation & control",
   },
@@ -60,10 +62,10 @@ export default function Home2() {
             </div>
           </div>
         </section>
-
-        <div className="px-4  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24">
+        <Marquee />
+        <div className="px-4 py-12 mx-auto w-full ">
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+            <h2 className=" mb-6 font-sans text-5xl font-bold leading-tight tracking-tight text-gray-900  ">
               Deliver a complete VIP experience from booking to booth.
             </h2>
 
@@ -85,7 +87,9 @@ export default function Home2() {
             </div>
           ))}
         </div>
-        <CTA />
+        <div className="flex flex-col items-center">
+          <CTA />
+        </div>
       </div>
     </div>
   );

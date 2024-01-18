@@ -5,8 +5,13 @@ export default {
     extend: {
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+        marquee: "marquee var(--duration, 30s) linear infinite",
       },
+
       keyframes: {
+        marquee: {
+          to: { transform: "translateX(-50%)" },
+        },
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
           "70%": { opacity: 1 },

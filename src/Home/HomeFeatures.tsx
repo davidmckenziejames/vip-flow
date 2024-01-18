@@ -29,24 +29,20 @@ const buttonStyle = {
 };
 const features = [
   {
-    title: "Low-Friction Opening Questions",
+    title: "Engaging Booking Questions",
     imageUrl: "http://media.djfan.app/images/questions.jpg",
   },
+
   {
-    title: "Multi-Step Contact Information",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
-  },
-  {
-    title: "Time Slot Options",
+    title: "Purchases Bottle Upfront",
     imageUrl: "http://media.djfan.app/images/bottles.jpg",
   },
   {
-    title: "Take Deposits for Callouts",
+    title: "Streamlined Checkout ",
     imageUrl: "http://media.djfan.app/images/pay.jpg",
   },
   {
-    title: "Streamlined Checkout",
+    title: "Reporting & Analytics",
     imageUrl:
       "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
   },
@@ -56,7 +52,27 @@ const features = [
       "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
   },
   {
-    title: "Instant Notifications & Lead Dashboard",
+    title: "Manage Bookings & Guestlist",
+    imageUrl:
+      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
+  },
+  {
+    title: "One Communication Dashboard",
+    imageUrl:
+      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
+  },
+  {
+    title: "Customer Profiles & Database",
+    imageUrl:
+      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
+  },
+  {
+    title: "SMS & Email Marketing",
+    imageUrl:
+      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
+  },
+  {
+    title: "One Communication Dashboard",
     imageUrl:
       "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
   },

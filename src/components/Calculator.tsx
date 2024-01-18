@@ -8,6 +8,7 @@ import {
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
+  SliderMark,
   VStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -21,10 +22,11 @@ import {
 } from "react-icons/fa";
 
 const ROICalculator = () => {
-  const [users, setUsers] = useState(10);
-  const [cost, setCost] = useState(195);
-
-  const earnings = Math.round(users * cost);
+  const [videos, setVideos] = useState(10);
+  const [cost, setCost] = useState(395);
+  const [hours, setHours] = useState(3);
+  const savings = videos * cost * 0.8;
+  const hours_saved = videos * hours * 0.9;
 
   return (
     <VStack
@@ -46,75 +48,167 @@ const ROICalculator = () => {
         overflow="hidden"
         border="2px solid cyan"
       >
-        <Heading
-          color="#fff"
-          fontSize={{ base: "18px", md: "20px" }}
-          mb="10px"
-          lineHeight={{ base: "1.2em", md: "1em" }}
-          textAlign="center"
-        >
-          Monthly Revenue
-        </Heading>
-
-        <Heading
-          size="26px"
-          color="white"
-          display={"flex"}
+        <Flex color="#fff" fontSize="22px" fontWeight="600" color="#fff">
+          AI Video Creation ROI Calculator
+        </Flex>
+        <Flex
+          id="sliders"
+          w="90%"
+          flexDir={"column"}
+          gap="35px"
           alignItems={"center"}
-          alignSelf={"flex-start"}
-          gap={"5px"}
-          ml="40px"
         >
-          <FaUsers />
-          {users} customers
-        </Heading>
-        <Slider
-          maxW="80%"
-          aria-label="Number of Users"
-          value={users}
-          min={0}
-          max={1000}
-          onChange={(val) => setUsers(val)}
-          defaultValue={10}
-        >
-          <SliderTrack>
-            <SliderFilledTrack />
-          </SliderTrack>
-          <SliderThumb boxSize={4} borderColor="gray.400" borderWidth={1} />
-        </Slider>
+          <Flex w="100%" flexDir={"column"} gap="15px" alignItems={"center"}>
+            <Heading
+              size="26px"
+              color="white"
+              display={"flex"}
+              alignItems={"center"}
+              alignSelf={"flex-start"}
+              gap={"5px"}
+            >
+              How many videos do you create a year?
+            </Heading>
+            <Slider
+              maxW="100%"
+              aria-label="Number of Users"
+              value={videos}
+              min={1}
+              max={300}
+              onChange={(val) => setVideos(val)}
+              defaultValue={10}
+            >
+              <SliderTrack>
+                <SliderFilledTrack />
+              </SliderTrack>
+              <SliderThumb boxSize={4} borderColor="gray.400" borderWidth={1} />
+            </Slider>
+            <HStack
+              lineHeight="1em"
+              w="100%"
+              fontSize="16px"
+              color="white"
+              fontWeight="500"
+              gap="0"
+              justifyContent={"space-between"}
+            >
+              <Flex w="20%" justifyContent={"flex-start"}>
+                0
+              </Flex>
+              <Flex w="80%" justifyContent={"center"}>
+                {videos} videos
+              </Flex>
+              <Flex w="20%" justifyContent={"flex-end"}>
+                300
+              </Flex>
+            </HStack>
+          </Flex>
 
-        <Heading
-          size="26px"
-          color="white"
-          display={"flex"}
-          alignItems={"center"}
-          alignSelf={"flex-start"}
-          ml="40px"
-        >
-          <FaPoundSign />
-          {cost} per month
-        </Heading>
-        <Slider
-          maxW="80%"
-          aria-label="Number of Users"
-          value={cost}
-          min={0}
-          max={1000}
-          onChange={(val) => setCost(val)}
-          defaultValue={195}
-        >
-          <SliderTrack>
-            <SliderFilledTrack />
-          </SliderTrack>
-          <SliderThumb boxSize={4} borderColor="gray.400" borderWidth={1} />
-        </Slider>
+          <Flex w="100%" flexDir={"column"} gap="15px" alignItems={"center"}>
+            <Heading
+              size="26px"
+              color="white"
+              display={"flex"}
+              alignItems={"center"}
+              alignSelf={"flex-start"}
+            >
+              What is your average video cost?
+            </Heading>
+            <Slider
+              aria-label="Cost"
+              value={cost}
+              min={0}
+              max={10000}
+              onChange={(val) => setCost(val)}
+              defaultValue={395}
+            >
+              <SliderTrack>
+                <SliderFilledTrack />
+              </SliderTrack>
+              <SliderThumb boxSize={4} borderColor="gray.400" borderWidth={1} />
+            </Slider>
+            <HStack
+              lineHeight="1em"
+              w="100%"
+              fontSize="16px"
+              color="white"
+              fontWeight="500"
+              gap="0"
+              justifyContent={"space-between"}
+            >
+              <Flex w="20%" justifyContent={"flex-start"}>
+                $0
+              </Flex>
+              <Flex w="80%" justifyContent={"center"}>
+                {" "}
+                ${cost} per video
+              </Flex>
+              <Flex w="20%" justifyContent={"flex-end"}>
+                $10,000
+              </Flex>
+            </HStack>
+          </Flex>
+          <Flex w="100%" flexDir={"column"} gap="10px" alignItems={"center"}>
+            <Heading
+              size="26px"
+              color="white"
+              display={"flex"}
+              alignItems={"center"}
+              alignSelf={"flex-start"}
+            >
+              How many hours to produce each video?
+            </Heading>
+            <Slider
+              maxW="100%"
+              aria-label="Number of Users"
+              value={hours}
+              min={0}
+              max={15}
+              onChange={(val) => setHours(val)}
+              defaultValue={3}
+            >
+              <SliderTrack>
+                <SliderFilledTrack />
+              </SliderTrack>
+              <SliderThumb boxSize={5} borderColor="gray.400" borderWidth={1} />
+            </Slider>
+            <HStack
+              lineHeight="1em"
+              w="100%"
+              fontSize="16px"
+              color="white"
+              fontWeight="500"
+              gap="0"
+              justifyContent={"space-between"}
+            >
+              <Flex w="20%" justifyContent={"flex-start"}>
+                0
+              </Flex>
+              <Flex w="80%" justifyContent={"center"}>
+                {hours} hours
+              </Flex>
+              <Flex w="20%" justifyContent={"flex-end"}>
+                15
+              </Flex>
+            </HStack>
+          </Flex>
+        </Flex>
 
-        <Flex>
+        <Flex
+          id="ROI"
+          flexDir={"column"}
+          alignItems="flex-start"
+          mt="20px"
+          w="90%"
+        >
+          <Box color="#fff" fontSize="18px" fontWeight="600" color="cyan">
+            Annual Return on Investment
+          </Box>
+          <Box py="6px" color="white" fontSize="20px">
+            <b>${savings}</b> reduction in costs
+          </Box>
           <Box color="white" fontSize="20px">
-            <span style={{ color: "cyan", fontWeight: "600" }}>
-              ${earnings}
-            </span>{" "}
-            per month
+            <b>{hours_saved}</b> hours saved
           </Box>
         </Flex>
       </VStack>
