@@ -30,8 +30,7 @@ const buttonStyle = {
 const features = [
   {
     title: "Low-Friction Opening Questions",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
+    imageUrl: "http://media.djfan.app/images/questions.jpg",
   },
   {
     title: "Multi-Step Contact Information",
@@ -40,13 +39,11 @@ const features = [
   },
   {
     title: "Time Slot Options",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
+    imageUrl: "http://media.djfan.app/images/bottles.jpg",
   },
   {
     title: "Take Deposits for Callouts",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
+    imageUrl: "http://media.djfan.app/images/pay.jpg",
   },
   {
     title: "Streamlined Checkout",

@@ -15,7 +15,7 @@ export default function HomeTopBar() {
         fontSize={{ base: "14px", sm: "16px", md: "18px" }}
         color="#fff"
       >
-        VIP table booking system with bottle pre-ordering
+        Booking & payments system built specifically for Nightclubs
       </Flex>
     </Flex>
   );
