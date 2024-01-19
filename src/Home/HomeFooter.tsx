@@ -8,9 +8,9 @@ const buttonStyle = {
 export default function HomeFooter() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Flex id="header" bg="#f8fafc" w="100%" justify="center">
-      <Flex px="10px" py="6px" color="#73717a">
-        © 2024 VIPFLOW. All rights reserved
+    <Flex id="header" bg="#111" color="#fff" w="100%" justify="center">
+      <Flex px="10px" py="12px" fontSize="14px">
+        © 2024 VIPflow. All rights reserved
       </Flex>
     </Flex>
   );

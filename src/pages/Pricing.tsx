@@ -70,7 +70,7 @@ export default function Pricing() {
             overflow="hidden"
             border="2px solid cyan"
           >
-            <Flex color="#fff" fontSize="22px" fontWeight="600" color="#fff">
+            <Flex color="#fff" fontSize="22px" fontWeight="600">
               AI Video Creation ROI Calculator
             </Flex>
             <Flex
@@ -250,7 +250,7 @@ export default function Pricing() {
               mt="20px"
               w="90%"
             >
-              <Box color="#fff" fontSize="18px" fontWeight="600" color="cyan">
+              <Box color="#fff" fontSize="18px" fontWeight="600">
                 Annual Return on Investment
               </Box>
               <Box py="6px" color="white" fontSize="20px">

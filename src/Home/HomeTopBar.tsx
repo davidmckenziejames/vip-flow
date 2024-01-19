@@ -5,7 +5,7 @@ export default function HomeTopBar() {
   return (
     <Flex
       id="header"
-      bgGradient="linear(to-l, rgb(248, 52, 246), rgb(152, 38, 252))"
+      bgGradient="linear(to-r,  rgb(9, 9, 121) 11.2%, rgb(144, 6, 161) 83.7%)"
       w="100%"
       justify="center"
       py={{ base: "6px", md: "10px" }}

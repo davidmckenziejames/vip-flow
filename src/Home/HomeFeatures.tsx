@@ -4,6 +4,7 @@ import {
   Flex,
   Image,
   VStack,
+  Heading,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -41,41 +42,6 @@ const features = [
     title: "Streamlined Checkout ",
     imageUrl: "http://media.djfan.app/images/pay.jpg",
   },
-  {
-    title: "Reporting & Analytics",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
-  },
-  {
-    title: "Confirmation/Reminder Emails & SMS",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
-  },
-  {
-    title: "Manage Bookings & Guestlist",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
-  },
-  {
-    title: "One Communication Dashboard",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
-  },
-  {
-    title: "Customer Profiles & Database",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
-  },
-  {
-    title: "SMS & Email Marketing",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
-  },
-  {
-    title: "One Communication Dashboard",
-    imageUrl:
-      "https://mckenzie-james.com/wp-content/uploads/2023/12/image-select.png",
-  },
 ];
 
 export default function HomeFeatures() {
@@ -83,15 +49,12 @@ export default function HomeFeatures() {
   return (
     <Flex
       w="100%"
-      justify="center"
-      bgImage={`url('https://demo.mckenzie-james.com/wp-content/uploads/2024/01/customer-bg.jpg')`}
-      bgSize="cover"
-      bgPosition="center center"
-      style={{
-        backgroundColor: "rgba(0, 0, 0, 0.5)",
-        backgroundBlendMode: "overlay",
-      }}
+      alignItems="center"
+      flexDirection="column"
+      background=" linear-gradient(to top, #cc208e 0%, #6713d2 100%);"
+      py="30px"
     >
+      <Heading color="#fff">Key Features</Heading>
       <Flex
         flexWrap="wrap"
         rowGap={{ base: "15px", md: "25px" }}
@@ -105,8 +68,8 @@ export default function HomeFeatures() {
             key={feature.title}
             className="featureCard"
             w={{ base: "100%", md: "48%" }}
-            bg="navy"
-            border="1px solid navy"
+            bg="#111"
+            border="1px solid #111"
             borderRadius="10px"
             overflow="hidden"
             gap="0"
@@ -148,7 +111,14 @@ export default function HomeFeatures() {
               </ModalContent>
             </Modal>
             <Image src={feature.imageUrl} />
-            <Flex py="10px" color="#fff" fontWeight="600">
+            <Flex
+              borderTop="1px solid #fff"
+              w="100%"
+              py="10px"
+              color="#fff"
+              justify="center"
+              fontWeight="600"
+            >
               {feature.title}
             </Flex>
           </VStack>
