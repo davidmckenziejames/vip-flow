@@ -214,7 +214,10 @@ export default function Vudu() {
           position="sticky"
           top="0"
         >
-          <Image width="80px" src="src/assets/vudu-logo.png" />
+          <Image
+            width="80px"
+            src="https://vip.mckenzie-james.com/wp-content/uploads/2024/01/vudu-logo-1.png"
+          />
           <Flex color="#fff" as="a" href="#cart" alignItems="center" gap="5px">
             <FiShoppingBag />£{totalFromBottles.toFixed(2)}
           </Flex>
@@ -353,7 +356,6 @@ export default function Vudu() {
             />
           </FormControl>
           <Flex
-            bg="#fff"
             mt={"10px"}
             position="relative"
             border={"2px solid black"}
@@ -364,7 +366,7 @@ export default function Vudu() {
             gap={"0px"}
             w={"100%"}
             overflow={"hidden"}
-            bgGradient="linear(to-l, rgb(248, 52, 246) 0.6%, rgb(152, 38, 252) 90%)"
+            bg="#111"
           >
             <Flex
               py="15px"
@@ -376,14 +378,12 @@ export default function Vudu() {
               alignItems={"center"}
             >
               <Text
-                bgGradient={
-                  "linear(to-l,  rgb(9, 154, 151), rgb(21, 205, 168) 91.1%)"
-                }
+                bg="#b69f6c"
                 color={"white"}
                 fontWeight={"700"}
                 px="8px"
                 py="5px"
-                borderRadius={"5px"}
+                borderRadius={"8px"}
                 fontSize={"14px"}
                 lineHeight={"1em"}
               >

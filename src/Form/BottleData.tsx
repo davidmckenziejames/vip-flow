@@ -20,25 +20,29 @@ export const bottleData: BottleType[] = [
         name: "Grey Goose",
         price: "£100",
         quantity: 0,
-        imageUrl: "src/assets/bottles/grey-goose.webp",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/grey-goose.jpg",
       },
       {
         name: "Absolut",
         price: "£130",
         quantity: 0,
-        imageUrl: "src/assets/bottles/absolut.webp",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/absolut.jpg",
       },
       {
         name: "Belvedere",
         price: "£150",
         quantity: 0,
-        imageUrl: "src/assets/bottles/belvedere.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/belvedere.jpg",
       },
       {
-        name: "Ciroc",
+        name: "Smirnoff",
         price: "£135",
         quantity: 0,
-        imageUrl: "src/assets/bottles/ciroc-vodka.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/vodka-smirnoff-red-no21-alcool-40-07l-5410316519724_1_1000x1000-1.webp",
       },
     ],
   },
@@ -80,27 +84,31 @@ export const bottleData: BottleType[] = [
     bottles: [
       {
         name: "Bombay Sapphire",
-        price: "£25",
+        price: "£250",
         quantity: 0,
-        imageUrl: "src/assets/bottles/bombay-sapphire.webp",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/bombay-sapphire.jpg",
       },
       {
         name: "Hendrick's",
-        price: "£40",
+        price: "£240",
         quantity: 0,
-        imageUrl: "src/assets/bottles/hendricks.webp",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/hendricks.jpg",
       },
       {
         name: "Beefeater",
-        price: "£20",
+        price: "£200",
         quantity: 0,
-        imageUrl: "src/assets/bottles/beefeater.webp",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/beefeater.jpg",
       },
       {
         name: "Gordon's",
-        price: "£15",
+        price: "£150",
         quantity: 0,
-        imageUrl: "src/assets/bottles/gordons.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/gordons.jpg",
       },
     ],
   },
@@ -109,27 +117,31 @@ export const bottleData: BottleType[] = [
     bottles: [
       {
         name: "Patron",
-        price: "£45",
+        price: "£245",
         quantity: 0,
-        imageUrl: "src/assets/bottles/patron_silver.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/patron-silver.jpg",
       },
       {
         name: "Don Julio",
-        price: "£50",
+        price: "£250",
         quantity: 0,
-        imageUrl: "src/assets/bottles/don-julio.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/don-julio.jpg",
       },
       {
         name: "Herradura",
-        price: "£55",
+        price: "£255",
         quantity: 0,
-        imageUrl: "src/assets/bottles/herradura.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/herradura.jpg",
       },
       {
         name: "El Jimador",
-        price: "£35",
+        price: "£250",
         quantity: 0,
-        imageUrl: "src/assets/bottles/eljimador.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/el-jimador.jpg",
       },
     ],
   },
@@ -138,28 +150,32 @@ export const bottleData: BottleType[] = [
     bottles: [
       {
         name: "Moet & Chandon",
-        price: "£50",
+        price: "£360",
         quantity: 0,
-        imageUrl: "src/assets/bottles/mc.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/moet-chandon.jpg",
       },
       {
         name: "Veuve Clicquot",
-        price: "£70",
+        price: "£270",
         quantity: 0,
-        imageUrl: "src/assets/bottles/v-c.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/veuve-clicquot.jpg",
       },
       {
         name: "Dom Perignon",
-        price: "£200",
+        price: "£400",
         quantity: 0,
-        imageUrl: "src/assets/bottles/dom-perignon.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/dom-perignon.jpg",
       },
 
       {
         name: "Louis Roederer ",
         price: "£300",
         quantity: 0,
-        imageUrl: "src/assets/bottles/louis-roe.webp",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/louis-roederer-1.jpg",
       },
     ],
   },
@@ -167,29 +183,32 @@ export const bottleData: BottleType[] = [
     type: "Packages",
     bottles: [
       {
-        name: "Moet & Chandon",
-        price: "£50",
+        name: "Package 1",
+        price: "£350",
         quantity: 0,
-        imageUrl: "src/assets/bottles/mc.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/image-coming-soon-placeholder.png",
       },
       {
-        name: "Veuve Clicquot",
-        price: "£70",
+        name: "Package 2",
+        price: "£500",
         quantity: 0,
-        imageUrl: "src/assets/bottles/v-c.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/image-coming-soon-placeholder.png",
       },
       {
-        name: "Dom Perignon",
-        price: "£200",
+        name: "Package 3",
+        price: "£1500",
         quantity: 0,
-        imageUrl: "src/assets/bottles/dom-perignon.jpg",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/image-coming-soon-placeholder.png",
       },
-
       {
-        name: "Louis Roederer ",
-        price: "£300",
+        name: "Package 4",
+        price: "£5000",
         quantity: 0,
-        imageUrl: "src/assets/bottles/louis-roe.webp",
+        imageUrl:
+          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/image-coming-soon-placeholder.png",
       },
     ],
   },

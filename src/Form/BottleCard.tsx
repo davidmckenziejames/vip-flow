@@ -37,7 +37,7 @@ export function BottleCard(props: {
   const { children, quantity, onIncrement, onDecrement, imageUrl } = props;
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Flex as="label" w={{ base: "45%", md: "30%" }} cursor="pointer">
+    <Flex as="label" w={{ base: "47%", md: "30%" }} cursor="pointer">
       <VStack
         borderWidth="1px"
         borderRadius="md"
