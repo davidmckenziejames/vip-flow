@@ -38,6 +38,7 @@ import Reviews from "./pages/Reviews";
 import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import Thankyou from "./pages/Thankyou";
+import Join from "./pages/Join";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -53,6 +54,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/thankyou" element={<Thankyou />} />
+            <Route path="/signup" element={<Join />} />
           </Routes>
         </Router>
       </ChakraProvider>
