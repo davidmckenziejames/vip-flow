@@ -1,29 +1,15 @@
 import React, { useState, useCallback } from "react";
 import {
   Box,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
   VStack,
-  Button,
-  useRadioGroup,
-  useToast,
-  useRadio,
   Text,
   HStack,
   Image,
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
   useDisclosure,
   Flex,
-  Heading,
 } from "@chakra-ui/react";
 import { FiEye, FiMinus, FiX } from "react-icons/fi";
 import { FaMinus, FaPlus } from "react-icons/fa";
@@ -56,7 +42,11 @@ export function BottleCard(props: {
 
         <Modal isCentered isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
-          <ModalContent>
+          <ModalContent
+            maxW={{ base: "90%", md: "fit-content" }}
+            borderRadius="10px"
+            overflow="hidden"
+          >
             <Box position="relative">
               <Box position="absolute" right="5px" top="5px" onClick={onClose}>
                 <FiX fontSize="30px" />

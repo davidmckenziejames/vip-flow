@@ -56,7 +56,7 @@ export default function HomeHero() {
         <Image
           mb="10px"
           height={{ base: "40px", md: "60px" }}
-          src="http://media.djfan.app/images/New-Project-1.png"
+          src="http://assets.vipflow.co.uk/files/vipflow-logo.png"
         />
         <Flex
           {...text}

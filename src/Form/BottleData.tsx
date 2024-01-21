@@ -20,29 +20,25 @@ export const bottleData: BottleType[] = [
         name: "Grey Goose",
         price: "£100",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/grey-goose.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/grey-goose.jpg",
       },
       {
         name: "Absolut",
         price: "£130",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/absolut.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/absolut.jpg",
       },
       {
         name: "Belvedere",
         price: "£150",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/belvedere.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/belvedere.jpg",
       },
       {
         name: "Smirnoff",
         price: "£135",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/vodka-smirnoff-red-no21-alcool-40-07l-5410316519724_1_1000x1000-1.webp",
+        imageUrl: "http://assets.vipflow.co.uk/files/smirnoff.webp",
       },
     ],
   },
@@ -53,29 +49,25 @@ export const bottleData: BottleType[] = [
         name: "Monkey Shoulder",
         price: "£300",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/monkey-shoulder.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/monkey-shoulder.jpg",
       },
       {
         name: "Macallan Gold",
         price: "£360",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/macallan-gold.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/macallan-gold.jpg",
       },
       {
         name: "Johnnie Walker",
         price: "£300",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/johnnie-walker-blue.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/johnnie-walker-blue.jpg",
       },
       {
         name: "Glenfiddich 12yr",
         price: "£300",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/glenfiddich-12.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/glenfiddich-12.jpg",
       },
     ],
   },
@@ -86,29 +78,25 @@ export const bottleData: BottleType[] = [
         name: "Bombay Sapphire",
         price: "£250",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/bombay-sapphire.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/bombay-sapphire.jpg",
       },
       {
         name: "Hendrick's",
         price: "£240",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/hendricks.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/hendricks.jpg",
       },
       {
         name: "Beefeater",
         price: "£200",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/beefeater.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/beefeater.jpg",
       },
       {
         name: "Gordon's",
         price: "£150",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/gordons.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/gordons.jpg",
       },
     ],
   },
@@ -119,29 +107,25 @@ export const bottleData: BottleType[] = [
         name: "Patron",
         price: "£245",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/patron-silver.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/patron-silver.jpg",
       },
       {
         name: "Don Julio",
         price: "£250",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/don-julio.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/donjulio.jpg",
       },
       {
         name: "Herradura",
         price: "£255",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/herradura.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/herradura.jpg",
       },
       {
         name: "El Jimador",
         price: "£250",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/el-jimador.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/el-jimador.jpg",
       },
     ],
   },
@@ -152,30 +136,26 @@ export const bottleData: BottleType[] = [
         name: "Moet & Chandon",
         price: "£360",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/moet-chandon.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/moet-chandon.jpg",
       },
       {
         name: "Veuve Clicquot",
         price: "£270",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/veuve-clicquot.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/veuve-clicquot.jpg",
       },
       {
         name: "Dom Perignon",
         price: "£400",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/dom-perignon.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/domperignon.jpg",
       },
 
       {
         name: "Louis Roederer ",
         price: "£300",
         quantity: 0,
-        imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/louis-roederer-1.jpg",
+        imageUrl: "http://assets.vipflow.co.uk/files/louis-roederer.jpg",
       },
     ],
   },
@@ -187,28 +167,28 @@ export const bottleData: BottleType[] = [
         price: "£350",
         quantity: 0,
         imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/image-coming-soon-placeholder.png",
+          "http://assets.vipflow.co.uk/files/image-coming-soon-placeholder.png",
       },
       {
         name: "Package 2",
         price: "£500",
         quantity: 0,
         imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/image-coming-soon-placeholder.png",
+          "http://assets.vipflow.co.uk/files/image-coming-soon-placeholder.png",
       },
       {
         name: "Package 3",
         price: "£1500",
         quantity: 0,
         imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/image-coming-soon-placeholder.png",
+          "http://assets.vipflow.co.uk/files/image-coming-soon-placeholder.png",
       },
       {
         name: "Package 4",
         price: "£5000",
         quantity: 0,
         imageUrl:
-          "https://demo.mckenzie-james.com/wp-content/uploads/2024/01/image-coming-soon-placeholder.png",
+          "http://assets.vipflow.co.uk/files/image-coming-soon-placeholder.png",
       },
     ],
   },

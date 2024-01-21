@@ -1,6 +1,6 @@
+import { useState } from "react";
 import {
   Box,
-  Button,
   Flex,
   Image,
   VStack,
@@ -8,44 +8,38 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
   useDisclosure,
-  HStack,
 } from "@chakra-ui/react";
-import { FaEye } from "react-icons/fa";
-import { FiCheck, FiCheckSquare, FiEye, FiX } from "react-icons/fi";
-import HomeHeader from "../Home/HomeHeader";
-import HomeHero from "../Home/HomeHero";
-const fontStyle = {
-  lineHeight: "1em",
-};
-const buttonStyle = {
-  lineHeight: "1em",
-  fontWeight: "600",
-  rounded: "lg",
-  cursor: "pointer",
-};
-const features = [
+import { FiEye, FiX } from "react-icons/fi";
+interface Feature {
+  title: string;
+  imageUrl: string;
+}
+
+const features: Feature[] = [
   {
     title: "Engaging Booking Questions",
     imageUrl: "http://media.djfan.app/images/questions.jpg",
   },
-
   {
     title: "Purchases Bottle Upfront",
     imageUrl: "http://media.djfan.app/images/bottles.jpg",
   },
   {
-    title: "Streamlined Checkout ",
+    title: "Streamlined Checkout",
     imageUrl: "http://media.djfan.app/images/pay.jpg",
   },
 ];
 
 export default function HomeFeatures() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [currentFeature, setCurrentFeature] = useState<Feature | null>(null);
+
+  const handleOpen = (feature: Feature) => {
+    setCurrentFeature(feature);
+    onOpen();
+  };
+
   return (
     <Flex
       w="100%"
@@ -80,7 +74,7 @@ export default function HomeFeatures() {
               position="absolute"
               right="5px"
               top="5px"
-              onClick={onOpen}
+              onClick={() => handleOpen(feature)}
               bg="#4b2bc0"
               p="5px"
               rounded="full"
@@ -89,27 +83,6 @@ export default function HomeFeatures() {
               <FiEye />
             </Box>
 
-            <Modal isCentered isOpen={isOpen} onClose={onClose}>
-              <ModalOverlay />
-              <ModalContent>
-                <Flex position="relative">
-                  <Image src={feature.imageUrl} />
-                  <Box
-                    color="#fff"
-                    position="absolute"
-                    right="5px"
-                    top="5px"
-                    bg="#4b2bc0"
-                    p="5px"
-                    rounded="full"
-                    cursor="pointer"
-                    onClick={onClose}
-                  >
-                    <FiX />
-                  </Box>
-                </Flex>
-              </ModalContent>
-            </Modal>
             <Image src={feature.imageUrl} />
             <Flex
               borderTop="1px solid #fff"
@@ -124,6 +97,31 @@ export default function HomeFeatures() {
           </VStack>
         ))}
       </Flex>
+      <Modal isCentered isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent
+          maxW={{ base: "95%", md: "800px" }}
+          borderRadius={"8px"}
+          overflow={"hidden"}
+        >
+          <Flex position="relative">
+            {currentFeature && <Image src={currentFeature.imageUrl} />}
+            <Box
+              color="#fff"
+              position="absolute"
+              right="10px"
+              top="10px"
+              bg="#4b2bc0"
+              p="5px"
+              rounded="full"
+              cursor="pointer"
+              onClick={onClose}
+            >
+              <FiX />
+            </Box>
+          </Flex>
+        </ModalContent>
+      </Modal>
     </Flex>
   );
 }

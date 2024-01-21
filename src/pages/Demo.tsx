@@ -15,24 +15,33 @@ import {
   FormLabel,
   useRadioGroup,
 } from "@chakra-ui/react";
+import RadioCard from "../components/RadioCard";
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import GroupSize from "../components/GroupSize";
+import partyOptions from "../components/partyOptions";
+import { timeOptions } from "../components/timeOptions";
 import { ContactForm } from "../components/ContactForm";
 import GroupSizeSelect from "../components/GroupSize";
 import Bottles, { Total } from "../Form/Bottles";
 import { FaApple, FaArrowRight, FaLock, FaUsers } from "react-icons/fa";
+
+import Confirm from "../components/Confirm";
 import { options, Option } from "../Form/CelebrationOptions";
 import { PaymentButtons } from "../Form/PaymentButtons";
 import { format } from "date-fns";
 import {
   FiCalendar,
   FiClock,
+  FiFileText,
+  FiPenTool,
   FiShoppingBag,
   FiSmile,
   FiUsers,
 } from "react-icons/fi";
 import TimeSelect from "../Form/TimeOption";
 import { BiParty } from "react-icons/bi";
-const logo = "http://assets.vipflow.co.uk/files/vudu-logo.png";
+const logo = "http://assets.vipflow.co.uk/files/vipflow-logo.png";
 const fontlabelStyle = {
   fontSize: "20px",
   fontWeight: "600",
@@ -57,7 +66,7 @@ function isIOS() {
     (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
   );
 }
-export default function Vudu() {
+export default function Demo() {
   const [selectedOption, setSelectedOption] = useState<string | undefined>();
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");

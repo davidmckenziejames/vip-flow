@@ -29,7 +29,7 @@ export default function LoginHeader() {
         <Box as="a" href="/" cursor="pointer">
           <Image
             height={{ base: "30px", md: "30px" }}
-            src="http://media.djfan.app/images/New-Project-1.png"
+            src="http://assets.vipflow.co.uk/files/vipflow-logo.png"
           />
         </Box>
         <Flex

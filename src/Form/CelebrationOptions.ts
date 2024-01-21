@@ -8,49 +8,42 @@ export const options: Option[] = [
   {
     value: "justForFun",
     label: "Just for Fun",
-    imageUrl:
-      "https://vip.mckenzie-james.com/wp-content/uploads/2024/01/disco-ball.png",
+    imageUrl: "http://assets.vipflow.co.uk/files/justforfun.png",
   },
   {
     value: "birthday",
     label: "Birthday",
-    imageUrl:
-      "https://vip.mckenzie-james.com/wp-content/uploads/2024/01/birthday-cake.png",
+    imageUrl: "http://assets.vipflow.co.uk/files/birthday.png",
   },
   {
     value: "specialOccasion",
     label: "Special Occasion",
-    imageUrl:
-      "https://vip.mckenzie-james.com/wp-content/uploads/2024/01/confetti.png",
+    imageUrl: "http://assets.vipflow.co.uk/files/specialoccasion.png",
   },
   {
     value: "anniversary",
     label: "Anniversary",
-    imageUrl:
-      "https://vip.mckenzie-james.com/wp-content/uploads/2024/01/anniversary.png",
+    imageUrl: "http://assets.vipflow.co.uk/files/anniversary.png",
   },
   {
     value: "date",
     label: "Date",
-    imageUrl:
-      "https://vip.mckenzie-james.com/wp-content/uploads/2024/01/cheers.png",
+    imageUrl: "http://assets.vipflow.co.uk/files/date.png",
   },
   {
     value: "accomplishment",
     label: "Accomplishment",
-    imageUrl:
-      "https://vip.mckenzie-james.com/wp-content/uploads/2024/01/star.png",
+    imageUrl: "http://assets.vipflow.co.uk/files/accomplishment.png",
   },
   {
     value: "wedding",
     label: "Wedding",
-    imageUrl:
-      "https://vip.mckenzie-james.com/wp-content/uploads/2024/01/diamond.png",
+    imageUrl: "http://assets.vipflow.co.uk/files/wedding.png",
   },
+
   {
     value: "other",
     label: "Other",
-    imageUrl:
-      "https://vip.mckenzie-james.com/wp-content/uploads/2024/01/dance.png",
+    imageUrl: "http://assets.vipflow.co.uk/files/other.png",
   },
 ];
