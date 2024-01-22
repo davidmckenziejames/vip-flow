@@ -40,6 +40,7 @@ import Pricing from "./pages/Pricing";
 import Thankyou from "./pages/Thankyou";
 import Join from "./pages/Join";
 import Demo from "./pages/Demo";
+import Nautical from "./pages/Nautical";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -50,6 +51,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <Route path="/" element={<Home />} />
             <Route path="/demo" element={<Demo />} />
             <Route path="/vudu" element={<Vudu />} />
+            <Route path="/nautical" element={<Nautical />} />
             <Route path="/pacha" element={<Pacha />} />
             <Route path="/pestadmin" element={<PestAdmin />} />
             <Route path="/roi" element={<ROICalculator />} />

@@ -147,7 +147,7 @@ export default function Bottles({ onTotalUpdate }: BottlesProps) {
                     >
                       <Box
                         fontWeight={"600"}
-                        fontSize="16px"
+                        fontSize={{ base: "14px", md: "16px" }} // "16px"
                         lineHeight={"1em"}
                         color="#111"
                       >
