@@ -7,12 +7,13 @@ import HomeFooter from "../Home/HomeFooter";
 import HomeTopBar from "../Home/HomeTopBar";
 import Home2 from "../Home/Home2";
 import Marquee from "../Home/marquee";
+import Features from "../Home/Features";
 
 export default function Home() {
   return (
     <Flex w="100%" h="100%" minH="100vh" flexDirection="column" bg="#fff">
       <HomeHero />
-
+      <Features />
       <HomePreFeatures />
 
       <HomeFeatures />
